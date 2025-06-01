@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user'); // Importamos el modelo de usuario
+const User = require('../models/User'); // Importamos el modelo de usuario
 const bcrypt = require('bcryptjs'); //librería para encriptar y comparar contraseñas.
 const jwt = require('jsonwebtoken'); //para crear tokens que permiten identificar a un usuario autenticado.
 
