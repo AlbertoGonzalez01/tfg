@@ -13,7 +13,7 @@ mongoose.connect('mongodb+srv://AlbertoTFG:7Ji6hsp.V#3ukT%@aplicaciontfg.rftumey
 .then(() => console.log('MongoDB conectado'))
 .catch(err => console.error('Error de conexión:', err));
 
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/auth', require('./routes/Auth'));
 
 app.use('/api/photos', require('./routes/photos'));
 app.use('/api/friends', require('./routes/friends'));
