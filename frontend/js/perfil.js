@@ -31,7 +31,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
     const imageUrl = cloudData.secure_url;
 
     // 2. Enviar info al backend
-    const res = await fetch('http://localhost:5000/api/photos/upload', {
+    const res = await fetch('https://backend-tfg-9u97.onrender.com/api/photos/upload', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ imageUrl, caption, userId })
@@ -50,7 +50,7 @@ async function cargarFotos() {
   if (!userId) return;
     alert("no has iniciado sesión");
   try {
-    const res = await fetch(`http://localhost:5000/api/photos/${userId}`);
+    const res = await fetch(`https://backend-tfg-9u97.onrender.com/api/photos/${userId}`);
     const fotos = await res.json();
 
     const container = document.getElementById('photosContainer');

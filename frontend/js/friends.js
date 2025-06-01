@@ -4,7 +4,7 @@ const userId = localStorage.getItem('userId');
 
 async function cargarFriends() {
   try {
-    const res = await fetch(`http://localhost:5000/api/friends/${userId}`);
+    const res = await fetch(`https://backend-tfg-9u97.onrender.com/api/friends/${userId}`);
     const friends = await res.json();
 
     const container = document.getElementById('listaFriends');
@@ -29,21 +29,21 @@ document.getElementById('btnBuscar').addEventListener('click', async () => {
   if (!username) return alert('Introduce un nombre de usuario');
 
   try {
-    const res = await fetch('http://localhost:5000/api/auth/friends/buscar-usuarios');
+    const res = await fetch('https://backend-tfg-9u97.onrender.com/api/auth/friends/buscar-usuarios');
     const users = await res.json();
     const match = users.find(u => u.user === username);
 
     if (!match) return alert('Usuario no encontrado');
     if (match._id === userId) return alert('No puedes agregar a ti mismo como amigo');
 
-    const yaEsAmigo = await fetch(`http://localhost:5000/api/friends/${userId}`);
+    const yaEsAmigo = await fetch(`https://backend-tfg-9u97.onrender.com/api/friends/${userId}`);
     const amigosActuales = await yaEsAmigo.json();
 
     if (amigosActuales.some(a => a._id === match._id)) {
       return alert('Ya tienes agregado a ese usuario');
     }
 
-    await fetch('http://localhost:5000/api/friends/add', {
+    await fetch('https://backend-tfg-9u97.onrender.com/api/friends/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, friendId: match._id })
@@ -58,7 +58,7 @@ document.getElementById('btnBuscar').addEventListener('click', async () => {
 
 async function removeFriend(friendId) {
   try {
-    await fetch('http://localhost:5000/api/friends/remove', {
+    await fetch('https://backend-tfg-9u97.onrender.com/api/friends/remove', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, friendId }) 

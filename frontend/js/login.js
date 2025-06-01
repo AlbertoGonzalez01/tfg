@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
   try {
     //console.log(user, password);
 
-    const res = await fetch('http://localhost:5000/api/auth/login', {
+    const res = await fetch('https://backend-tfg-9u97.onrender.com/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user, password }),
