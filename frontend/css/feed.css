@@ -1,0 +1,132 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #a1c4fd; /* Fondo azul suave */
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Gradiente suave en azul */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh; /* Asegura que la altura mínima sea del 100% */
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto; /* Permite el desplazamiento en toda la página */
+}
+
+/* Contenedor de los botones */
+#buttonsContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex; /* Flexbox para alinear los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+  z-index: 1000; /* Asegura que los botones estén por encima de otros elementos */
+}
+
+/* Estilo para el botón de Cerrar Sesión */
+#logout {
+  padding: 10px 20px;
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#logout:hover {
+  background-color: #feb47b;
+}
+
+/* Estilo para el botón de Ver Amigos */
+#friendsBtn {
+  padding: 10px 20px;
+  background-color: #3b7cc1; /* Azul para el botón de amigos */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#friendsBtn:hover {
+  background-color: #1e5d99; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilo para el título */
+h1 {
+  color: #3b7cc1; /* Tono de azul más oscuro */
+  margin-bottom: 30px;
+}
+
+/* Estilos del formulario de subida de fotos */
+#uploadForm {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#uploadForm input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #c2e9fb;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#uploadForm input[type="file"] {
+  padding: 10px 0;
+}
+
+#uploadForm button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b7cc1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#uploadForm button:hover {
+  background-color: #1e5d99;
+}
+
+/* Estilo para el contenedor de fotos */
+#photosContainer {
+  display: flex;
+  flex-direction: column; /* Apilado vertical */
+  align-items: center;
+  gap: 20px; /* Mayor espacio entre las imágenes */
+  width: 100%;
+  padding: 10px;
+}
+
+#photosContainer img {
+  width: 250px; /* Aumento del tamaño de las imágenes */
+  height: 300px; /* Aumento de la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#photosContainer img:hover {
+  transform: scale(1.1); /* Efecto zoom ligeramente mayor */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Feed</title>
+  <link rel="stylesheet" href="./css/feed.css" />
+</head>
+<body>
+  <h1>Públicaciones</h1>
+  <div id="buttonsContainer">  
+  <button onclick="window.location.href='friends.html'" id="friendsBtn">Ver Amigos</button>
+  <button id="logout">Cerrar sesion</button>
+  </div>
+
+  <form id="uploadForm">
+    <input type="file" id="photo" accept="image/*" required />
+    <input type="text" id="caption" placeholder="Comentario..." />
+    <button type="submit">Subir</button>
+  </form>
+  <div id="photosContainer"></div>
+
+  <script src="js/feed.js"></script>
+
+</body>

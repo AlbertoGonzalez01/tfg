@@ -1,0 +1,106 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #a1c4fd; /* Fondo azul suave */
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Gradiente suave en azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/* Agregar forma geométrica al fondo */
+body::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #3b7cc1;
+  margin-bottom: 30px;
+}
+
+/* Formulario */
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  color: #3b7cc1;
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  margin-top: 15px;
+}
+
+/* Estilos de los inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #c2e9fb; /* Borde azul claro */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #3b7cc1; /* Azul oscuro al hacer foco */
+}
+
+/* Estilos del botón de registro */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b7cc1; /* Azul más oscuro para el botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e5d99; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilo para el enlace de inicio de sesión */
+p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+a {
+  color: #3b7cc1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #1e5d99;
+}

@@ -1,0 +1,128 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #a1c4fd; /* Fondo azul suave */
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Gradiente suave en azul */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh; /* Asegura que la altura mínima sea del 100% */
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto; /* Permite desplazamiento si el contenido excede el alto */
+}
+
+/* Título principal */
+h1 {
+  color: #3b7cc1; /* Tono de azul más oscuro */
+  margin-bottom: 30px;
+}
+
+/* Estilo para el campo de búsqueda y botón */
+div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 2px solid #c2e9fb;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3b7cc1; /* Azul oscuro al hacer foco */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3b7cc1; /* Azul para el botón de buscar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e5d99; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Título de la lista de amigos */
+h2 {
+  color: #3b7cc1;
+  margin-bottom: 20px;
+}
+
+/* Estilo para la lista de amigos */
+#listaFriends {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+#listaFriends div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listaFriends div span {
+  font-size: 16px;
+  color: #333;
+}
+
+#listaFriends div button {
+  background-color: #ff7e5f; /* Naranja suave para el botón de eliminar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#listaFriends div button:hover {
+  background-color: #feb47b; /* Naranja más claro al pasar el mouse */
+}
+
+/* Botón "Back to Feed" en la esquina superior derecha */
+button[onclick] {
+  position: absolute;
+  top: 20px; /* 20px desde el borde superior */
+  right: 20px; /* 20px desde el borde derecho */
+  background-color: #ff7e5f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+button[onclick]:hover {
+  background-color: #feb47b; /* Naranja más claro al pasar el mouse */
+}
