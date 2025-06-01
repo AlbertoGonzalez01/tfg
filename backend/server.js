@@ -15,7 +15,7 @@ mongoose.connect('mongodb+srv://AlbertoTFG:7Ji6hsp.V#3ukT%@aplicaciontfg.rftumey
 
 app.use('/api/auth', require('./routes/Auth'));
 
-app.use('/api/photos', require('./routes/photos'));
+app.use('/api/photos', require('./routes/Photos'));
 app.use('/api/friends', require('./routes/friends'));
 
 //escuchamos el puerto 5000
